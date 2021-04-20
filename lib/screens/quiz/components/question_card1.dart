@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/controllers/question_controller1.dart';
 import 'package:quiz/models/BooleanQues.dart';
+import 'package:quiz/screens/quiz/components/option2.dart';
 
 import '../../../constants.dart';
 import 'option.dart';
@@ -34,10 +35,10 @@ class QuestionCard1 extends StatelessWidget {
                 .headline6
                 .copyWith(color: kBlackColor),
           ),
-          SizedBox(height: kDefaultPadding / 2),
+          SizedBox(height: kDefaultPadding / 3),
           ...List.generate(
             question.options.length,
-            (index) => Option(
+            (index) => Option1(
               index: index,
               text: question.options[index],
               press: () => _controller.checkAns(question, index),

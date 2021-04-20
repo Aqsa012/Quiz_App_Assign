@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/constants.dart';
-import 'package:quiz/controllers/question_controller.dart';
+import 'package:quiz/controllers/question_controller1.dart';
 import 'package:quiz/demo.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
-class ScoreScreen extends StatelessWidget {
+class ScoreScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _qnController = Get.put(QuestionController());
+    QuestionController1 _qnController = Get.put(QuestionController1());
     return Scaffold(
+      backgroundColor: Colors.tealAccent,
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // WebsafeSvg.asset("assets/icons/flock.svg", fit: BoxFit.fill),
+          // WebsafeSvg.asset("assets/trophy.svg", fit: BoxFit.fill),
           Column(
             children: [
               Spacer(flex: 2),

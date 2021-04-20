@@ -4,6 +4,7 @@ import 'package:quiz/constants.dart';
 import 'package:quiz/controllers/question_controller1.dart';
 import 'package:quiz/models/BooleanQues.dart';
 import 'package:quiz/screens/quiz/components/question_card1.dart';
+import 'package:quiz/screens/score/score_screen1.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import 'progress_bar.dart';
@@ -69,6 +70,28 @@ class BoolBody extends StatelessWidget {
                       question: _questionController.questions[index]),
                 ),
               ),
+
+              InkWell(
+                onTap: () => Get.to(ScoreScreen1()),
+                child: Container(
+                  width: 200.0,
+                  margin: EdgeInsets.only(left: 100.0, top: 0.0),
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.all(kDefaultPadding * 1), // 15
+                  decoration: BoxDecoration(
+                    gradient: kPrimaryGradient,
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                  ),
+                  child: Text(
+                    "Calculate Score",
+                    style: Theme.of(context)
+                        .textTheme
+                        .button
+                        .copyWith(color: Colors.black, fontSize: 19.0),
+                  ),
+                ),
+              ),
+              //ScoreBtn(),
             ],
           ),
         )

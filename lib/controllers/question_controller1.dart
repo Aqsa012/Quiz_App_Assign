@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:quiz/models/BooleanQues.dart';
 import 'package:quiz/screens/score/score_screen.dart';
+import 'package:quiz/screens/score/score_screen1.dart';
 
 // We use get package for our state management
 
@@ -105,7 +106,7 @@ class QuestionController1 extends GetxController
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       // Get package provide us simple way to naviigate another page
-      Get.to(ScoreScreen());
+      Get.to(ScoreScreen1());
     }
   }
 
