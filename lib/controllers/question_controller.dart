@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
-import 'package:quiz/models/BooleanQues.dart';
+import 'package:quiz/models/Questions.dart';
 import 'package:quiz/screens/score/score_screen.dart';
 
 // We use get package for our state management
 
-class QuestionController1 extends GetxController
+class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 
@@ -18,16 +18,16 @@ class QuestionController1 extends GetxController
   PageController _pageController;
   PageController get pageController => this._pageController;
 
-  List<BoolQuestion> _questions = sample_data1
+  List<Question> _questions = sample_data
       .map(
-        (question) => BoolQuestion(
+        (question) => Question(
             id: question['id'],
             question: question['question'],
             options: question['options'],
             answer: question['answer_index']),
       )
       .toList();
-  List<BoolQuestion> get questions => this._questions;
+  List<Question> get questions => this._questions;
 
   bool _isAnswered = false;
   bool get isAnswered => this._isAnswered;
@@ -51,7 +51,7 @@ class QuestionController1 extends GetxController
     // Our animation duration is 60 s
     // so our plan is to fill the progress bar within 60s
     _animationController =
-        AnimationController(duration: Duration(seconds: 30), vsync: this);
+        AnimationController(duration: Duration(seconds: 60), vsync: this);
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController)
       ..addListener(() {
         // update like setState
@@ -73,7 +73,7 @@ class QuestionController1 extends GetxController
     _pageController.dispose();
   }
 
-  void checkAns(BoolQuestion question, int selectedIndex) {
+  void checkAns(Question question, int selectedIndex) {
     // because once user press any option then it will run
     _isAnswered = true;
     _correctAns = question.answer;
@@ -95,7 +95,7 @@ class QuestionController1 extends GetxController
     if (_questionNumber.value != _questions.length) {
       _isAnswered = false;
       _pageController.nextPage(
-          duration: Duration(milliseconds: 250), curve: Curves.ease);
+          duration: Duration(seconds: 60), curve: Curves.ease);
 
       // Reset the counter
       _animationController.reset();
