@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/aboutus.dart';
 import 'package:quiz/constants.dart';
+import 'package:quiz/contactus.dart';
 import 'package:quiz/controllers/question_controller1.dart';
 import 'package:quiz/demo.dart';
 import 'package:websafe_svg/websafe_svg.dart';
