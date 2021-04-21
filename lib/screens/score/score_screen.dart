@@ -4,6 +4,7 @@ import 'package:quiz/aboutus.dart';
 import 'package:quiz/constants.dart';
 import 'package:quiz/controllers/question_controller.dart';
 import 'package:quiz/demo.dart';
+import 'package:quiz/navbar.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class ScoreScreen extends StatelessWidget {
@@ -73,7 +74,7 @@ class ScoreScreen extends StatelessWidget {
               ),
               SizedBox(height: 20.0),
               InkWell(
-                onTap: () => Get.to(WelcomeScreen()),
+                onTap: () => Get.to(Home()),
                 child: Container(
                   width: 200.0,
                   margin: EdgeInsets.only(left: 15.0, top: 0.0),

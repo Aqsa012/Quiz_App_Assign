@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:quiz/constants.dart';
+import 'package:quiz/navbar.dart';
 import 'package:quiz/screens/quiz/quiz_screen.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 import 'package:image_picker/image_picker.dart';
@@ -21,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 10),
+        Duration(seconds: 7),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SecondScreen())));
   }
@@ -77,7 +78,7 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home: Home(),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dart:io';
 import 'package:quiz/constants.dart';
+import 'package:quiz/navbar.dart';
 import 'package:quiz/screens/quiz/quiz_screen.dart';
 import 'package:quiz/screens/quiz/quiz_screen1.dart';
 import 'package:websafe_svg/websafe_svg.dart';
@@ -88,7 +89,7 @@ class _MyWelcomeScreen extends State<WelcomeScreen> {
                       ),
                     ),
                   ),
-                  Spacer(flex: 2), // it will take 2/6 spaces
+                  Spacer(flex: 2), //
                 ],
               ),
             ),
